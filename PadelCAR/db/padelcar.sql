@@ -2,6 +2,8 @@ CREATE DATABASE padelcardb;
 
 USE padelcardb;
 
+se añaden comentarios, para Git
+
 CREATE TABLE cliente (
   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
   nombre varchar(50) NOT NULL,

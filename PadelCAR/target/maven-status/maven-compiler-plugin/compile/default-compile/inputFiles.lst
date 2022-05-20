@@ -1,0 +1,9 @@
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\controller\ClienteController.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\service\IClienteService.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\dao\IClienteDao.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\service\ClienteServiceImpl.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\dao\ClienteDaoImpl.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\config\WebConfig.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\config\HibernateConfig.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\config\WebInitializer.java
+C:\PROYECTO INTEGRADO\WS_AGROGESTION3\PadelCAR\src\main\java\padelcar\model\Cliente.java

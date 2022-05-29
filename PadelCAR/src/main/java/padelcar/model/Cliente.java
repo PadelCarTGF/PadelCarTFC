@@ -34,7 +34,7 @@ public class Cliente {
 	
 	@NotNull
 	@Column(name = "email")
-	private String mail;
+	private String email;
 	
 	@NotNull
 	@Column(name = "password")
@@ -80,12 +80,12 @@ public class Cliente {
 		this.fecha_nac = fecha_nac;
 	}
 
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {

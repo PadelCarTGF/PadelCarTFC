@@ -13,6 +13,10 @@ public interface IClienteService {
 	public void saveOrUpdate(Cliente cliente);
 
 	public Cliente findClienteById(int id);
+	
+	public Cliente findClienteByEmail(String email);
+	
+	public Cliente findClienteByPassword(String password);
 
 	public void deleteCliente(int id);
 

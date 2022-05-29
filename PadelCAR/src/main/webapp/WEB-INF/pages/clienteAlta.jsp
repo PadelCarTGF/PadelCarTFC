@@ -94,9 +94,6 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 			</nav>
 		</header>
 
-
-
-
 		<div class="col-sm-12">
 			<section id="site-content">
 
@@ -109,7 +106,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 				<spring:url value="/cliente/save" var="saveURL" />
 
 				<div class="table-responsive">
-					<form:form action="${saveURL }" method="POST"
+					<form:form action="${saveURL}" method="POST"
 						modelAttribute="clienteForm" id="nuevoCliente">
 						<form:hidden path="id" />
 						<table class="table table-striped table-hover">
@@ -137,7 +134,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 							<tr>
 								<th>Correo electrónico*</th>
-								<td><form:input type="email" path="mail" maxlength="40" /></td>
+								<td><form:input type="email" path="email" maxlength="40" /></td>
 							</tr>
 							<tr>
 								<th>Password*</th>

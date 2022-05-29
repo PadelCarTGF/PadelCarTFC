@@ -40,4 +40,14 @@ public class ClienteServiceImpl implements IClienteService {
 		clienteDao.deleteCliente(id);
 	}
 
+	@Override
+	public Cliente findClienteByEmail(String email) {
+		return clienteDao.findClienteByEmail(email);
+	}
+
+	@Override
+	public Cliente findClienteByPassword(String password) {
+		return clienteDao.findClienteByPassword(password);
+	}
+
 }

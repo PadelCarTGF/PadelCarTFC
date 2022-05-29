@@ -46,4 +46,16 @@ public class ClienteDaoImpl implements IClienteDao {
 		
 	}
 
+	@Override
+	public Cliente findClienteByEmail(String email) {
+		Cliente cliente = (Cliente) getSession().get(Cliente.class, email);
+		return cliente;
+	}
+
+	@Override
+	public Cliente findClienteByPassword(String password) {
+		Cliente cliente = (Cliente) getSession().get(Cliente.class, password);
+		return cliente;
+	}
+
 }

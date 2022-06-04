@@ -44,7 +44,7 @@
                 </sf:form>
                 <form action="clienteAlta" method="get">
 	                <div class="col-12 forgot">
-	                    <a href="registro">Registrarse</a>
+	                    <a href="clientes">Registrarse</a>
 	                </div>
                 </form>
 <!-- No logro que salga este mensaje en caso de error en la contraseña -->                

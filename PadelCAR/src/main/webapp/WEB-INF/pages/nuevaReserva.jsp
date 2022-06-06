@@ -87,14 +87,12 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login"><span
-								class="glyphicon glyphicon-log-in"></span> Inicia sesión</a></li>
+						<li><a href="index"><span
+								class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
 					</ul>
 				</div>
 			</nav>
 		</header>
-
-
 
 
 		<div class="col-sm-12">

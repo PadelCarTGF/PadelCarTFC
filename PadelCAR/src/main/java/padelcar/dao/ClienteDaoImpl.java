@@ -3,6 +3,7 @@ package padelcar.dao;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,13 +49,17 @@ public class ClienteDaoImpl implements IClienteDao {
 
 	@Override
 	public Cliente findClienteByEmail(String email) {
-		Cliente cliente = (Cliente) getSession().get(Cliente.class, email);
+		Query q = getSession().createQuery("from Cliente cl where cl.email=:email");
+		q.setParameter("email", email.toString().trim());
+		Cliente cliente = (Cliente) q.uniqueResult(); 
 		return cliente;
 	}
 
 	@Override
 	public Cliente findClienteByPassword(String password) {
-		Cliente cliente = (Cliente) getSession().get(Cliente.class, password);
+		Query q = getSession().createQuery("from Cliente cl where cl.password=:password");
+		q.setParameter("password", password.toString().trim());
+		Cliente cliente = (Cliente) q.uniqueResult(); 
 		return cliente;
 	}
 

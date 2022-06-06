@@ -25,18 +25,23 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "nuevaReserva")	
+	@RequestMapping(value = "nuevaReserva", method = RequestMethod.POST)	
 	public String validateUser(@Valid Cliente cliente, BindingResult result, Model model) {
 		model.addAttribute("cliente", new Cliente());
 		if (result.hasErrors()) {
-			return "login";
+			return "redirect:/login";
 		} else {
-			Cliente cliPass = clienteService.findClienteByPassword(cliente.getPassword());
+		
 			Cliente cliEmail = clienteService.findClienteByEmail(cliente.getEmail());		
-			if (cliEmail.getId() == cliPass.getId()) {
+			Cliente cliPass = clienteService.findClienteByPassword(cliente.getPassword());
+			
+			if (cliEmail == null || cliPass == null) {
+				return "redirect:/login";
+				
+			}else if(cliEmail.getId() == cliPass.getId()) {
 				return "nuevaReserva";
 			}else {
-				return "login";
+				return "redirect:/login";
 			}
 		}
 	}

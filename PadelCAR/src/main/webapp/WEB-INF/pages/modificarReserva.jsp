@@ -80,15 +80,15 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 						</a>
 							<ul class="dropdown-menu">
 								<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
-								<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
+								<li><a href="modificarReserva">MODIFICAR RESERVA</a></li>
 							</ul></li>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/PadelCAR"><span
-								class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>
+						<li><a href="login"><span
+								class="glyphicon glyphicon-log-in"></span> Inicia sesión</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -98,57 +98,17 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 
 		<div class="col-sm-12">
-			<section id="site-list">
-				<spring:url value="/nuevaReserva/getAll" var= "getAllURL" />
-				<div style = "width: 650px; height: 100px; line-height: 3em; overflow:scroll; 
-								border: thin #000 solid; padding: 5px;">
-					<b>AQUI IRIA LA LISTA RESERVAS COMPLETA</b> 											<!-- Temporal -->
-							
-				</div>
-			</section>
-			
 			<section id="site-content">
 
-					<!--  INDICAR EL FORMULARIO PARA DAR DE ALTA UNA NUEVA RESERVA ........ -->
-					<spring:url value="/nuevaReserva/guardar" var= "guardarURL" />
-					
-					<div class="table-responsive">
-						<form:form action="${guardarURL }" method="POST"
-							modelAttribute="reservaForm" id="nuevaReserva">
-							<form:hidden path="id"/>
-							<form:hidden path="cliente_id"/>                           <!-- hay que traer el valor de cliente -->
-							<table class="table table-striped table-hover">
-								<tr>
-									<th>Nombre Pista</th>
-									<td><form:select path="nombre_pista" name="pista" id="pista">
-										<option value="A">Acua</option>
-										<option value="L">Luna</option>
-										<option value="C">Circo</option>
-									</form:select></td>
-									
-								</tr>
-								<tr>
-									<th>Fecha</th>
-									<td><form:input path="fecha" type="date" id="fecha" name="fecha"
-	       								min="2022-06-04"/></td>
-									
-								</tr>
-								<tr>
-									<th>Hora</th>
-									<td><form:input path="hora" type="time" id="hora" name="hora"
-										min="9:00" max="21:00" step="3600"/></td>
-									
-								</tr>
-								<tr>
-									<th>Numero Jugadores</th>
-									<td><form:input path="num_jugadores" type="number" min="1" max="4"/><td>
-								
-								</tr>
-							
-							</table>
-						</form:form>
-						
-					</div>
+				<div style="margin-bottom: 30px; margin-top: 20px;">
+					<button type="button" onclick="history.back()"
+						class="btn btn-warning">VOLVER</button>
+				</div>
+
+				<div id="msgSalida"></div>
+				
+					<!--  INDICAR EL FORMULARIO PARA modificar ........ -->
+				
 			
 			</section>
 		</div>

@@ -39,7 +39,7 @@ public class LoginController {
 				return "redirect:/login?error=true";
 				
 			}else if(cliEmail.getId() == cliPass.getId()) {
-				return "nuevaReserva";
+				return "redirect:/nuevaReserva";
 			}else {
 				return "redirect:/login?error=true";
 			}

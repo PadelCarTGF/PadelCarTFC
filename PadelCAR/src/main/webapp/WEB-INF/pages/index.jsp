@@ -21,7 +21,6 @@
 </head>
 
 
-
 <body>
 	<div class="container">
 		<header>
@@ -83,7 +82,7 @@
 							</ul></li>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
-						
+
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="login"><span
@@ -103,10 +102,14 @@
 				<h3>
 					<strong> Aplicación para la gestión de pistas de pádel. </strong>
 				</h3>
+
+				<div class=".col-md-" align="center">
+					<img src="/PadelCAR/static/img/plano_instalaciones.png"
+						alt="Plano instalaciones" class="img-thumbnail"> <br>
+				</div>
+
 			</article>
 		</div>
-
-
 
 		<footer
 			style="position: relative; text-align: center; background-color: #333; color: #848484;">

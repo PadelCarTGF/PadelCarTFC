@@ -29,7 +29,7 @@
         <div class="col-sm-8 main-section">
             <div class="modal-content">
                 <div class="col-12 user-img">
-                    <img src="static/img/user.png" th:src="@{/img/user.png}"/>
+                    <img src="static/img/user3.jpg" th:src="@{/img/user3.jpg}"/>
                 </div>
                 <sf:form class="col-12" action="nuevaReserva" method="POST" modelAttribute="loginForm">
                     <div class="form-group" id="user-group">

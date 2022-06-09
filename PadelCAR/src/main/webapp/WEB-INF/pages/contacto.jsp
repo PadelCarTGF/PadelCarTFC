@@ -95,38 +95,80 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 			</nav>
 		</header>
 
-<div class="row">
-	<div class="col-sm-12">
-		<section id="site-content">
+		<div class="row">
+			<div class="col-sm-12">
+				<section id="site-content">
 
-			<div style="margin-bottom: 30px; margin-top: 20px;">
-			<h2> UBICACIÓN INSTALACIONES PADELCAR </h2>
-					<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.292420374185!2d-3.6183981851906624!3d40.535128256355165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422da995a9e6ab%3A0x3dd2d61b103821da!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20de%20Alcobendas)!5e0!3m2!1ses!2ses!4v1652702048818!5m2!1ses!2ses"
-				width="600" height="450" style="border: 0;" allowfullscreen=""
-				loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-			
-			<div style="margin-bottom: 30px; margin-top: 20px;">
-			<h2> INFORMACIÓN </h2>
-					<p> Av. de Fernando Alonso, 8, 28108 Alcobendas, Madrid </p>
-					<p>91 789 546 524</p>
-					<p> info@padelcar.com</p>
-					<p>http://localhost:8080/PadelCAR/</p>
-			</div>
-			
-		</section>
-	</div>
-</div>
+					<div style="position: relative; text-align: center;">
+						<table width="90%">
 
-<footer
-		style="position: relative; text-align: center; background-color: #333; color: #848484;">
-		<div>
-			<small> - Carlos, Alfredo y Rafaela - </small> <br> <small>
-				*Copyright &copy; 2022. All rights reserved.* </small>
+							<tr>
+								<td><img src="/PadelCAR/static/img/direccion.jpg"
+									alt="Dirección"
+									style="width: 150px; margin-left: auto; margin-right: auto;"></td>
+								<td><img src="/PadelCAR/static/img/telefono.jpg"
+									alt="Teléfono"
+									style="width: 150px; margin-left: auto; margin-right: auto;"></td>
+								<td><img src="/PadelCAR/static/img/email.jpg" alt="Email"
+									style="width: 150px; margin-left: auto; margin-right: auto;" /></td>
+							</tr>
+
+							<tr>
+								<td><h3
+										style="font-weight: bold; text-transform: uppercase;">DIRECCION</h3>
+									<p>
+										<span> <b>Padel CAR</b> <br> Av. de Fernando
+											Alonso, 8 <br> 28108 Alcobendas <br> Madrid
+
+										</span>
+									</p></td>
+								<td><h3
+										style="font-weight: bold; text-transform: uppercase;">TELEFONO</h3>
+									<p>
+										<span> <b>Recepción Padel CAR</b> <br> 91 789 546
+											524 <br>
+
+										</span>
+									</p></td>
+								<td><h3
+										style="font-weight: bold; text-transform: uppercase;">Email</h3>
+									<p>
+										<span> <b>Información</b> <br> info@padelcar.com <br>
+										</span>
+									</p>
+									<p>
+										<span> <b>Quejas y sugerencias</b> <br>
+											sugerencias@padelcar.com <br>
+										</span>
+									</p></td>
+							</tr>
+
+						</table>
+					</div>
+
+
+					<div
+						style="text-align: center; margin-bottom: 20px; margin-top: 50px;">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.292420374185!2d-3.6183981851906624!3d40.535128256355165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422da995a9e6ab%3A0x3dd2d61b103821da!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20de%20Alcobendas)!5e0!3m2!1ses!2ses!4v1652702048818!5m2!1ses!2ses"
+							width="1000" height="300" style="border: 0;" allowfullscreen=""
+							loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+
+
+
+				</section>
+			</div>
 		</div>
-	</footer>
 
+		<footer
+			style="position: relative; text-align: center; background-color: #333; color: #848484;">
+			<div>
+				<small> - Carlos, Alfredo y Rafaela - </small> <br> <small>
+					*Copyright &copy; 2022. All rights reserved.* </small>
+			</div>
+		</footer>
+	</div>
 </body>
 </html>
 

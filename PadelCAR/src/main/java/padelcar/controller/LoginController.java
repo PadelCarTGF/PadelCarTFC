@@ -36,12 +36,12 @@ public class LoginController {
 			Cliente cliPass = clienteService.findClienteByPassword(cliente.getPassword());
 			
 			if (cliEmail == null || cliPass == null) {
-				return "redirect:/login";
+				return "redirect:/login?error=true";
 				
 			}else if(cliEmail.getId() == cliPass.getId()) {
 				return "nuevaReserva";
 			}else {
-				return "redirect:/login";
+				return "redirect:/login?error=true";
 			}
 		}
 	}

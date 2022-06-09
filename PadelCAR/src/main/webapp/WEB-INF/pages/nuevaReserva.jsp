@@ -87,7 +87,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index"><span
+						<li><a href="ventajas"><span
 								class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
 					</ul>
 				</div>

@@ -5,7 +5,6 @@ import java.sql.Time;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,14 +18,18 @@ import padelcar.service.IReservaService;
 @Controller
 @RequestMapping(value = "/")
 public class ReservasController {
-
 	IReservaService reservaService;
+	LoginController lC = new LoginController();
 
 	@RequestMapping(value = "/nuevaReserva", method = RequestMethod.GET)
 	public ModelAndView visualizar() {
 		ModelAndView model = new ModelAndView("nuevaReserva");
 		Reserva reserva = new Reserva();
 		model.addObject("reservaForm", reserva);
+		
+		int cliId = lC.enviarId(); // Variable que retorna Login en caso de iniciar sesion
+								   // Devuelve 0 si el usuario no ha iniciado sesion
+		
 		return model;
 	}
 	

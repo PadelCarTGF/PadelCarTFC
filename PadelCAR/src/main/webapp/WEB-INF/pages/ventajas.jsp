@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -75,20 +76,30 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 					</div>
 					<ul class="nav navbar-nav">
 						<li><a href="clientes">NUEVO USUARIO</a></li>
-						<li class="dropdown"><a class="dropdown-toggle"
-							data-toggle="dropdown" href="#">RESERVAS <span class="caret"></span>
-						</a>
-							<ul class="dropdown-menu">
-								<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
-								<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
-							</ul></li>
+						<c:if test="${para.valor}"> 
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#">RESERVAS <span class="caret"></span>
+							</a>
+								<ul class="dropdown-menu">
+									<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
+									<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
+								</ul></li>
+						</c:if>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login"><span
-								class="glyphicon glyphicon-log-in"></span> Inicia sesión</a></li>
+						<c:if test="${param.valor}"> 
+							<li><a href="/PadelCAR"> 
+								<span class="glyphicon glyphicon-log-in"></span> Cerrar sesión
+							</a></li>
+						</c:if>
+						<c:if test="${!param.valor}"> 
+							<li><a href="login"> 
+								<span class="glyphicon glyphicon-log-in"></span> Iniciar sesión
+							</a></li>
+						</c:if>
 					</ul>
 				</div>
 			</nav>

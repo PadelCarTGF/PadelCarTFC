@@ -8,11 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "/")
 public class ContactoController {
+	LoginController lC = new LoginController();
 
 	@RequestMapping(value = "/contacto", method = RequestMethod.GET)
 	public ModelAndView visualizar() {
-		ModelAndView model = new ModelAndView("contacto");
-		model.addObject("contacto");
-		return model;
+		int cliId = lC.enviarId(); // Variable que retorna Login en caso de iniciar sesion
+		   							// Devuelve 0 si el usuario no ha iniciado sesion
+		System.out.println(cliId);
+		if (cliId > 0) {
+			ModelAndView model = new ModelAndView("contacto");
+			return model.addObject("contacto");
+		}else {
+			ModelAndView model = new ModelAndView("contacto");
+			return model.addObject("contacto");
+		}
 	}
 }

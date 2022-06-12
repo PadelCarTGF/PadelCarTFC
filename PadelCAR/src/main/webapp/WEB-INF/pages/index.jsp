@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -72,14 +73,17 @@
 							class="glyphicon glyphicon-home"></span></a>
 					</div>
 					<ul class="nav navbar-nav">
+						
 						<li><a href="clientes">NUEVO USUARIO</a></li>
-						<li class="dropdown"><a class="dropdown-toggle"
-							data-toggle="dropdown" href="#">RESERVAS <span class="caret"></span>
-						</a>
-							<ul class="dropdown-menu">
-								<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
-								<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
-							</ul></li>
+						<c:if test="${param.valor}"> 
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#">RESERVAS <span class="caret"></span>
+							</a>
+								<ul class="dropdown-menu">
+									<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
+									<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
+								</ul></li>
+						</c:if>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
 

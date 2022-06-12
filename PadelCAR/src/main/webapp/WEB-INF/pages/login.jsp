@@ -34,11 +34,9 @@
                 <sf:form class="col-12" action="nuevaReserva" method="POST" modelAttribute="loginForm">
                     <div class="form-group" id="user-group">
                         <input type="text" class="form-control" placeholder="Correo electrónico" name="email"/>
-                        <sf:errors name="email"/>                        
                     </div>
                     <div class="form-group" id="contrasena-group">
                         <input type="password" class="form-control" placeholder="Contraseña" name="password"/>
-                        <sf:errors name="password"/>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                 </sf:form>
@@ -47,7 +45,7 @@
 	                    <a href="clientes">Registrarse</a>
 	                </div>
                 </form>
-<!-- No logro que salga este mensaje en caso de error en la contraseña -->                
+
                 <c:if test="${param.error}">
                		<div class="alert alert-danger" role="alert">
                		       El usuario o la contraseña son incorrectos.

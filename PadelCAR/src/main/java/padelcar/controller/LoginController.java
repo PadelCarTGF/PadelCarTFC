@@ -34,23 +34,20 @@ public class LoginController {
 			return "redirect:/login";
 		} else {
 		
-			Cliente cliEmail = clienteService.findClienteByEmail(cliente.getEmail());		
-			Cliente cliPass = clienteService.findClienteByPassword(cliente.getPassword());
+			Cliente client = clienteService.findClienteByEmailandPass(cliente.getEmail(), cliente.getPassword());		
+//			Cliente cliPass = clienteService.findClienteByPassword(cliente.getPassword());
 			
-			if (cliEmail == null || cliPass == null) {
+			if (client == null) {
 				return "redirect:/login?error=true";
 				
-			}else if(cliEmail.getId() == cliPass.getId()) {
+			}else {
 				request.getSession().setAttribute("correo", "Bienvenido " + request.getParameter("email"));		
-				idCliente =cliPass.getId();
+				idCliente =client.getId();
 				if (idCliente > 0) {
 					return "redirect:/nuevaReserva?valor=true";
 				}else {
 					return "redirect:/nuevaReserva";
-				}
-				
-			}else {
-				return "redirect:/login?error=true";
+				}	
 			}
 		}
 	}

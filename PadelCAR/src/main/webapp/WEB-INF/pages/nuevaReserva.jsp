@@ -87,15 +87,15 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/PadelCAR"> 
-							<span class="glyphicon glyphicon-log-in"></span> Cerrar sesión
+						<li><a href="/PadelCAR"> <span
+								class="glyphicon glyphicon-log-in"></span> Cerrar sesión
 						</a></li>
 
 					</ul>
 				</div>
 			</nav>
 		</header>
-		<h3 style=" color: graytext;">${correo }</h3>
+		<h3 style="color: graytext;">${correo }</h3>
 		<div class="col-sm-12">
 			<section id="site-list">
 				<spring:url value="/nuevaReserva/getAll" var="getAllURL" />
@@ -105,7 +105,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 				</div>
 			</section>
-			
+
 			<section id="site-content">
 
 				<!--  INDICAR EL FORMULARIO PARA DAR DE ALTA UNA NUEVA RESERVA ........ -->
@@ -145,7 +145,6 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 										max="4" />
 								<td>
 							</tr>
-
 						</table>
 					</form:form>
 

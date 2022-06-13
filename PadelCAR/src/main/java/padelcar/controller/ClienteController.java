@@ -30,7 +30,7 @@ public class ClienteController {
 	public ModelAndView save(@ModelAttribute("clienteForm") Cliente cliente) {
 		clienteService.saveOrUpdate(cliente);
 
-		return new ModelAndView("redirect:/nuevaReserva");
+		return new ModelAndView("redirect:/ventajas");
 	}
 	
 

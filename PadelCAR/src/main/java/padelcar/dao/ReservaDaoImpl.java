@@ -43,13 +43,13 @@ public class ReservaDaoImpl implements IReservaDao{
 
 	@Override
 	public Reserva findByCliente_idAndFechaAndHora(int cliente_id, Date fecha, Time hora) {
-		Reserva reserva = (Reserva) getSession().get(Reserva.class, );
+		Reserva reserva = (Reserva) getSession().get(Reserva.class, null);
 		return reserva;
 	}
 
 	@Override
 	public void deleteReserva(Date date, Time time) {
-		Reserva reserva = (Reserva) getSession().get(Reserva.class, );
+		Reserva reserva = (Reserva) getSession().get(Reserva.class,null );
 		getSession().delete(reserva);
 		
 	}

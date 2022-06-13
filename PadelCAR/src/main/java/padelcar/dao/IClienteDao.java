@@ -12,9 +12,9 @@ public interface IClienteDao {
 
 	public Cliente findClienteById(int id);
 	
-	public Cliente findClienteByEmail(String email);
+	public Cliente findClienteByEmailandPass(String email, String password);
 	
-	public Cliente findClienteByPassword(String password);
+//	public Cliente findClienteByPassword(String password);
 
 	public void deleteCliente(int id);
 }

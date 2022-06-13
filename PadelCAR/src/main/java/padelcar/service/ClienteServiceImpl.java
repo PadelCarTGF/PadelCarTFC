@@ -41,13 +41,13 @@ public class ClienteServiceImpl implements IClienteService {
 	}
 
 	@Override
-	public Cliente findClienteByEmail(String email) {
-		return clienteDao.findClienteByEmail(email);
+	public Cliente findClienteByEmailandPass(String email, String password) {
+		return clienteDao.findClienteByEmailandPass(email, password);
 	}
 
-	@Override
-	public Cliente findClienteByPassword(String password) {
-		return clienteDao.findClienteByPassword(password);
-	}
+//	@Override
+//	public Cliente findClienteByPassword(String password) {
+//		return clienteDao.findClienteByPassword(password);
+//	}
 
 }

@@ -76,6 +76,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 					</div>
 					<ul class="nav navbar-nav">
 						<li><a href="clientes">NUEVO USUARIO</a></li>
+
 						<c:if test="${para.valor}"> 
 							<li class="dropdown"><a class="dropdown-toggle"
 								data-toggle="dropdown" href="#">RESERVAS <span class="caret"></span>
@@ -85,6 +86,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 									<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
 								</ul></li>
 						</c:if>
+
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
 

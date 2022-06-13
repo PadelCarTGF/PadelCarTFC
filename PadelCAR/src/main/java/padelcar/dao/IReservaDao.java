@@ -16,6 +16,13 @@ public interface IReservaDao {
 	public void deleteReserva(Date date, Time time);
 
 	public Reserva findByCliente_idAndFechaAndHora(int cliente_id, Date fecha, Time hora);
+	
+	public void saveOrUpdate(Reserva reserva);
+
+	public Reserva findReservaById(int id);
+
+	public void deleteReserva(int id);
+
 
 
 }

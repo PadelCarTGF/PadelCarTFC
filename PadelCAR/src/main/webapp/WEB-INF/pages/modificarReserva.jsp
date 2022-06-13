@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
@@ -96,23 +97,39 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 
 
-
-		<div class="col-sm-12">
-			<section id="site-content">
-
-				<div style="margin-bottom: 30px; margin-top: 20px;">
-					<button type="button" onclick="history.back()"
-						class="btn btn-warning">VOLVER</button>
-				</div>
-
-				<div id="msgSalida"></div>
-				
-					<!--  INDICAR EL FORMULARIO PARA modificar ........ -->
-				
-			
-			</section>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Cliente</th>
+						<th>Pista</th>
+						<th>Fecha</th>
+						<th>Hora</th>
+						<th>Núm Jugadores</th>
+						<th colspan="2"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${list}" var="reserva">
+						<tr>
+							<td>${reserva.cliente_id}</td>
+							<td>${reserva.nombre_pista}</td>
+							<td>${reserva.fecha}</td>
+							<td>${reserva.hora}</td>
+							<td>${reserva.num_jugadores}</td>
+							<td><spring:url value="/reserva/update/${reserva.id }"
+									var="updateURL" /> <a href="${updateURL }"> <span
+									class="glyphicon glyphicon-refresh simboloColor"> </span>
+							</a></td>
+							<td><spring:url value="/reserva/delete/${reserva.id }"
+									var="deleteURL" /> <a href="${deleteURL }"> <span
+									class="glyphicon glyphicon-trash simboloColor"> </span></a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 		</div>
-	</div>
+		<br>
 
 	<footer
 		style="position: relative; text-align: center; background-color: #333; color: #848484;">
@@ -121,6 +138,6 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 				*Copyright &copy; 2022. All rights reserved.* </small>
 		</div>
 	</footer>
-
+	</div>
 </body>
 </html>

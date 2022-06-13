@@ -21,6 +21,7 @@
 </head>
 
 
+
 <body>
 	<div class="container">
 		<header>
@@ -78,7 +79,7 @@
 						</a>
 							<ul class="dropdown-menu">
 								<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
-								<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
+								<li><a href="modificarReserva">MODIFICAR RESERVA</a></li>
 							</ul></li>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
@@ -91,7 +92,7 @@
 				</div>
 			</nav>
 		</header>
-		<div class="row" style="margin-botton: 20px;">
+		<div class="row" class="container" style="margin-botton: 20px;" align="center">
 			<article id="articulo1" class="col-sm-12">
 
 				<h1>
@@ -102,14 +103,17 @@
 				<h3>
 					<strong> Aplicación para la gestión de pistas de pádel. </strong>
 				</h3>
-
 				<div class=".col-md-" align="center">
 					<img src="/PadelCAR/static/img/plano_instalaciones.png"
-						alt="Plano instalaciones" class="img-thumbnail"> <br>
+						alt="Plano instalaciones" class="img-thumbnail">
+						<br>
 				</div>
-
 			</article>
+			<br>
+
 		</div>
+<br>
+
 
 		<footer
 			style="position: relative; text-align: center; background-color: #333; color: #848484;">

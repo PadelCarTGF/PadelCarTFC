@@ -1,0 +1,90 @@
+
+body{
+    position: relative;
+    margin: auto;
+    height: 100%;
+    width: 1000px;
+    font-family: 'Abril Fatface', regular;
+}
+section{
+    position: relative;
+    padding: 2px;
+    background-color: white;
+    min-height: 5em; 
+}
+.formulario{
+    color:#ffa500;
+}
+#nombreUsuario{
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: white;
+}
+
+.txtInicial{
+    padding: 50px;
+    list-style-type: none;
+    font-family: 'Macondo', cursive;
+    font-size: 35px;
+    text-align: justify;
+}
+#titulos{
+    padding: 5px;
+    list-style-type: none;
+    font-family: 'Macondo', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+#articulo1{
+    padding: 20px;
+    height: 100%;
+    text-align: justify;
+    background-image:url(/AppAgroGestion/static/img/cebadaPpal.jpg);
+}
+#articulo1 h1 {
+	margin-top: 7em;
+}
+
+#pie{
+    position: relative;
+    text-align: center;
+   	background-color:#333;
+    color: #848484;
+}
+.simboloColor{
+	color:#5cb85c;
+}
+
+.botones{
+    text-decoration: none;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color:#BCF5A9;
+}
+
+.table-hover>tbody>tr:hover{
+	background-color:#04B45F;
+}
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+p.error{
+	color:red;
+	font-size: 20px;
+}
+#msgSalida{
+  display: none;
+  border: .1em red solid;
+  margin-bottom: 1em;
+  color: navy;
+  width: 20em;
+}
+
+.falta{
+  border: .1em red solid;
+}

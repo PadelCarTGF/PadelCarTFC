@@ -81,7 +81,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 						</a>
 							<ul class="dropdown-menu">
 								<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
-								<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
+								<li><a href="modificarReserva">MODIFICAR RESERVA</a></li>
 							</ul></li>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>

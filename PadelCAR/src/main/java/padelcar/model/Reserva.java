@@ -18,23 +18,23 @@ public class Reserva {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@NotNull
+	
 	@Column(name = "cliente_id")
 	private int cliente_id;
 	
-	@NotNull
+
 	@Column(name = "nombre_pista")
 	private String nombre_pista;
 	
-	@NotNull
+
 	@Column(name = "fecha")
 	private Date fecha;
 	
-	@NotNull
+
 	@Column(name = "hora")
 	private Time hora;
 	
-	@NotNull
+	
 	@Column(name = "num_jugadores")
 	private int num_jugadores;
 

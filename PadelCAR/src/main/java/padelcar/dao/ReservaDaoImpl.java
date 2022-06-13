@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import padelcar.model.Reserva;
 
+
 @Repository
 public class ReservaDaoImpl implements IReservaDao{
 	
@@ -43,14 +44,29 @@ public class ReservaDaoImpl implements IReservaDao{
 
 	@Override
 	public Reserva findByCliente_idAndFechaAndHora(int cliente_id, Date fecha, Time hora) {
-		Reserva reserva = (Reserva) getSession().get(Reserva.class, );
+//		Reserva reserva = (Reserva) getSession().get(Reserva.class, );
+//		return reserva;
+		return null;
+	}
+
+	public void saveOrUpdate(Reserva reserva) {
+		getSession().saveOrUpdate(reserva);
+	}
+
+	public Reserva findReservaById(int id) {
+		Reserva reserva = (Reserva) getSession().get(Reserva.class, id);
 		return reserva;
+	}
+
+	public void deleteReserva(int id) {
+		Reserva reserva = (Reserva) getSession().get(Reserva.class, id);
+		getSession().delete(reserva);
 	}
 
 	@Override
 	public void deleteReserva(Date date, Time time) {
-		Reserva reserva = (Reserva) getSession().get(Reserva.class, );
-		getSession().delete(reserva);
+//		Reserva reserva = (Reserva) getSession().get(Reserva.class, );
+//		getSession().delete(reserva);
 		
 	}
 

@@ -26,11 +26,11 @@ public class ReservaService implements IReservaService{
 		return listReservas;
 	}
 
-	@Override
-	public void save(Reserva reserva) {
-		reservaDao.save(reserva);
-		
-	}
+//	@Override
+//	public void save(Reserva reserva) {
+//		reservaDao.save(reserva);
+//		
+//	}
 
 	@Override
 	public List<Reserva> findByCliente_Id(int cliente_id) {
@@ -40,19 +40,31 @@ public class ReservaService implements IReservaService{
 
 	}
 
-	@Override
-	public void deleteReserva(Date date, Time time) {
-		reservaDao.deleteReserva(date, time);
-		
-	}
+//	@Override
+//	public void deleteReserva(Date date, Time time) {
+//		reservaDao.deleteReserva(date, time);
+//		
+//	}
+
+//	@Override
+//	public Reserva findByCliente_idAndFechaAndHora(int cliente_id, java.sql.Date fecha, Time hora) {
+//		Reserva reserva = new Reserva();
+//		reserva = reservaDao.findByCliente_idAndFechaAndHora(cliente_id, fecha, hora);
+//		return reserva;
+//	}
 
 	@Override
-	public Reserva findByCliente_idAndFechaAndHora(int cliente_id, java.sql.Date fecha, Time hora) {
-		Reserva reserva = new Reserva();
-		reserva = reservaDao.findByCliente_idAndFechaAndHora(cliente_id, fecha, hora);
-		return reserva;
+	public Reserva findReservaById(int id) {
+		return reservaDao.findReservaById(id);
 	}
-
 	
+	public void saveOrUpdate(Reserva reserva) {
+		reservaDao.saveOrUpdate(reserva);
+	}
+
+	@Override
+	public void deleteReserva(int id) {
+		reservaDao.deleteReserva(id);
+	}
 
 }

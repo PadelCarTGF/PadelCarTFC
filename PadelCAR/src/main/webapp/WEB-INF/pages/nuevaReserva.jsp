@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
@@ -80,7 +81,7 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 						</a>
 							<ul class="dropdown-menu">
 								<li><a href="nuevaReserva">NUEVA RESERVA</a></li>
-								<li><a href="pagEnConstruccion">MODIFICAR RESERVA</a></li>
+								<li><a href="modificarReserva">MODIFICAR RESERVA</a></li>
 							</ul></li>
 						<li><a href="ventajas">VENTAJAS DEL CLUB</a></li>
 						<li><a href="contacto">CONTACTO</a></li>
@@ -98,69 +99,75 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 
 		<div class="col-sm-12">
-			<section id="site-list">
-				<spring:url value="/nuevaReserva/getAll" var= "getAllURL" />
-				<div style = "width: 650px; height: 100px; line-height: 3em; overflow:scroll; 
-								border: thin #000 solid; padding: 5px;">
-					<b>AQUI IRIA LA LISTA RESERVAS COMPLETA</b> 											<!-- Temporal -->
-							
-				</div>
-			</section>
-			
+
 			<section id="site-content">
 
-					<!--  INDICAR EL FORMULARIO PARA DAR DE ALTA UNA NUEVA RESERVA ........ -->
-					<spring:url value="/nuevaReserva/guardar" var= "guardarURL" />
-					
-					<div class="table-responsive">
-						<form:form action="${guardarURL }" method="POST"
-							modelAttribute="reservaForm" id="nuevaReserva">
-							<form:hidden path="id"/>
-							<form:hidden path="cliente_id"/>                           <!-- hay que traer el valor de cliente -->
-							<table class="table table-striped table-hover">
-								<tr>
-									<th>Nombre Pista</th>
-									<td><form:select path="nombre_pista" name="pista" id="pista">
-										<option value="A">Acua</option>
-										<option value="L">Luna</option>
-										<option value="C">Circo</option>
+				<!--  INDICAR EL FORMULARIO PARA DAR DE ALTA UNA NUEVA RESERVA ........ -->
+				<spring:url value="/nuevaReserva/guardar" var="saveURL" />
+
+				<div class="table-responsive">
+					<form:form action="${saveURL}" method="POST"
+						modelAttribute="reservaForm" id="nuevaReserva">
+						<form:hidden path="id" />
+						<!--	<form:hidden path="cliente_id"/>              -->
+						<!-- hay que traer el valor de cliente -->
+						<table class="table table-striped table-hover">
+							<tr>
+								<th>Cliente*</th>
+								<td><form:input path="cliente_id" required="required"
+										maxlength="3" name="Cliente" /></td>
+							</tr>
+							<tr>
+								<th>Nombre Pista*</th>
+								<td><form:select path="nombre_pista" required="required">
+										<form:option value="" label="-- Elige una pista --" />
+										<form:option value="Aqua" label="Aqua"> Aqua </form:option>
+										<form:option value="Buba" label="Buba"> Buba </form:option>
+										<form:option value="Limbo" label="Limbo"> Limbo </form:option>
+										<form:option value="Master" label="Master"> Master </form:option>
 									</form:select></td>
-									
-								</tr>
-								<tr>
-									<th>Fecha</th>
-									<td><form:input path="fecha" type="date" id="fecha" name="fecha"
-	       								min="2022-06-04"/></td>
-									
-								</tr>
-								<tr>
-									<th>Hora</th>
-									<td><form:input path="hora" type="time" id="hora" name="hora"
-										min="9:00" max="21:00" step="3600"/></td>
-									
-								</tr>
-								<tr>
-									<th>Numero Jugadores</th>
-									<td><form:input path="num_jugadores" type="number" min="1" max="4"/><td>
-								
-								</tr>
-							
-							</table>
-						</form:form>
-						
-					</div>
-			
+
+							</tr>
+							<tr>
+								<th>Fecha*</th>
+								<td><form:input path="fecha" type="date" name="Fecha" /></td>
+
+							</tr>
+							<tr>
+								<th>Hora*</th>
+								<td><form:input path="hora" type="time" value="08:00:00"
+										max="22:00:00" min="08:00:00" step="1" name="Hora" /></td>
+
+							</tr>
+							<tr>
+								<th>Numero Jugadores</th>
+								<td><form:input path="num_jugadores" type="number" min="1"
+										max="4" />
+								<td>
+							</tr>
+							<tr>
+								<td><button type="submit" class="btn btn-success">
+										GUARDAR</button></td>
+							</tr>
+
+						</table>
+					</form:form>
+					<p>(*) Campos obligatorios</p>
+				</div>
+
 			</section>
+
+
+			<footer
+				style="position: relative; text-align: center; background-color: #333; color: #848484;">
+				<div>
+					<small> - Carlos, Alfredo y Rafaela - </small> <br> <small>
+						*Copyright &copy; 2022. All rights reserved.* </small>
+				</div>
+			</footer>
+
 		</div>
 	</div>
-
-	<footer
-		style="position: relative; text-align: center; background-color: #333; color: #848484;">
-		<div>
-			<small> - Carlos, Alfredo y Rafaela - </small> <br> <small>
-				*Copyright &copy; 2022. All rights reserved.* </small>
-		</div>
-	</footer>
 
 </body>
 </html>

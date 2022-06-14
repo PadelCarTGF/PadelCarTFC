@@ -23,12 +23,6 @@ public class ReservaDaoImpl implements IReservaDao{
 		return sessionFactory.getCurrentSession();
 	}
 	
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Reserva> listReservas() {
-		Criteria criteria = getSession().createCriteria(Reserva.class);
-		return (List<Reserva>) criteria.list();
-	}
 
 	@Override
 	public void save(Reserva reserva) {
@@ -63,7 +57,14 @@ public class ReservaDaoImpl implements IReservaDao{
 	public void deleteReserva(int id) {
 		Reserva reserva = (Reserva) getSession().get(Reserva.class, id);
 		getSession().delete(reserva);
+	}
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Reserva> listReservas() {
+		Criteria criteria = getSession().createCriteria(Reserva.class);
+		return (List<Reserva>) criteria.list();
 	}
+	
 
 	@Override
 	public void deleteReserva(Date date, Time time) {

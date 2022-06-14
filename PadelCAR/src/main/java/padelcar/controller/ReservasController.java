@@ -1,7 +1,6 @@
 package padelcar.controller;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +9,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import padelcar.model.Cliente;
 import padelcar.model.Reserva;
-import padelcar.service.ClienteServiceImpl;
 import padelcar.service.IClienteService;
 import padelcar.service.IReservaService;
 
@@ -83,10 +79,7 @@ public class ReservasController {
 		ModelAndView model = new ModelAndView("nuevaReserva");
 		Reserva reserva = new Reserva();
 		model.addObject("reservaForm", reserva);
-		
-		int cliId = lC.enviarId(); // Variable que retorna Login en caso de iniciar sesion
-								   // Devuelve 0 si el usuario no ha iniciado sesion
-		
+
 		return model;
 	}
 
@@ -113,8 +106,18 @@ public class ReservasController {
 	@RequestMapping(value = "/modificarReserva", method = RequestMethod.GET)
 	public ModelAndView list() {
 		ModelAndView model = new ModelAndView("modificarReserva");
+		LoginController lC = new LoginController();
+		int cliente_id = lC.enviarId();
+		
 		List<Reserva> list = reservaService.listReservas();
-		model.addObject("list", list);
+		List<Reserva> listFilter = new ArrayList<Reserva>();
+		
+		for (Reserva res : list) {
+			if (res.getCliente_id() == cliente_id) {
+				listFilter.add(res);
+			}
+		}
+		model.addObject("list", listFilter);
 
 		return model;
 	}

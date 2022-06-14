@@ -75,7 +75,6 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 							class="glyphicon glyphicon-home"></span></a>
 					</div>
 					<ul class="nav navbar-nav">
-						<li><a href="clientes">NUEVO USUARIO</a></li>
 						<li class="dropdown"><a class="dropdown-toggle"
 							data-toggle="dropdown" href="#">RESERVAS <span class="caret"></span>
 						</a>
@@ -88,8 +87,8 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login"><span
-								class="glyphicon glyphicon-log-in"></span> Inicia sesión</a></li>
+						<li><a href="/PadelCAR"><span
+								class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>
 					</ul>
 				</div>
 			</nav>

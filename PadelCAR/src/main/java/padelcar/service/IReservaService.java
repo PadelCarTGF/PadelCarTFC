@@ -1,8 +1,5 @@
 package padelcar.service;
 
-import java.sql.Date;
-import java.sql.Time;
-
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -11,6 +8,7 @@ import padelcar.model.Reserva;
 
 @Service
 public interface IReservaService {
+	
 	public List<Reserva> listReservas();
 
 //	public void save(Reserva reserva);

@@ -35,14 +35,15 @@ public class LoginController {
 		} else {
 		
 			Cliente client = clienteService.findClienteByEmailandPass(cliente.getEmail(), cliente.getPassword());		
-//			Cliente cliPass = clienteService.findClienteByPassword(cliente.getPassword());
 			
 			if (client == null) {
 				return "redirect:/login?error=true";
 				
 			}else {
-				request.getSession().setAttribute("correo", "Bienvenido " + request.getParameter("email"));		
+				request.getSession().setAttribute("correo", "Bienvenid@ " + request.getParameter("email"));		
 				idCliente =client.getId();
+				request.getSession().setAttribute("id_cli", idCliente);		
+
 				if (idCliente > 0) {
 					return "redirect:/nuevaReserva?valor=true";
 				}else {

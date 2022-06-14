@@ -114,9 +114,9 @@ Sólo modificar el contenido de la etiqueta >>>> section id="site-content"-->
 						<!-- hay que traer el valor de cliente -->
 						<table class="table table-striped table-hover">
 							<tr>
-								<th>Cliente*</th>
-								<td><form:input path="cliente_id" required="required"
-										maxlength="3" name="Cliente" /></td>
+								<th>Cliente</th>
+								<td><form:input path="cliente_id" value="${id_cli}" readonly="true" 
+										maxlength="3"/></td>
 							</tr>
 							<tr>
 								<th>Nombre Pista*</th>

@@ -14,7 +14,5 @@ public interface IClienteDao {
 	
 	public Cliente findClienteByEmailandPass(String email, String password);
 	
-//	public Cliente findClienteByPassword(String password);
-
 	public void deleteCliente(int id);
 }

@@ -45,9 +45,4 @@ public class ClienteServiceImpl implements IClienteService {
 		return clienteDao.findClienteByEmailandPass(email, password);
 	}
 
-//	@Override
-//	public Cliente findClienteByPassword(String password) {
-//		return clienteDao.findClienteByPassword(password);
-//	}
-
 }

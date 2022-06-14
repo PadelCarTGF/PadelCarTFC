@@ -1,7 +1,5 @@
 package padelcar.dao;
 
-import java.sql.Date;
-import java.sql.Time;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -36,14 +34,6 @@ public class ReservaDaoImpl implements IReservaDao{
 		return (List<Reserva>) criteria.list();
 	}
 
-	@Override
-	public Reserva findByCliente_idAndFechaAndHora(int cliente_id, Date fecha, Time hora) {
-
-//		Reserva reserva = (Reserva) getSession().get(Reserva.class,null );
-//		return reserva;
-		return null;
-	}
-
 	public void saveOrUpdate(Reserva reserva) {
 		getSession().saveOrUpdate(reserva);
 	}
@@ -63,16 +53,6 @@ public class ReservaDaoImpl implements IReservaDao{
 	public List<Reserva> listReservas() {
 		Criteria criteria = getSession().createCriteria(Reserva.class);
 		return (List<Reserva>) criteria.list();
-	}
-	
-
-	@Override
-	public void deleteReserva(Date date, Time time) {
-
-//		Reserva reserva = (Reserva) getSession().get(Reserva.class,null );
-//		getSession().delete(reserva);
-
-		
 	}
 
 }

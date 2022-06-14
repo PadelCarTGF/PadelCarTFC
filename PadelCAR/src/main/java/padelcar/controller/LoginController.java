@@ -53,7 +53,7 @@ public class LoginController {
 		}
 	}
 
-	public int enviarId() {
+	public int getIdClient() {
 		if (idCliente > 0) {
 			return idCliente;
 		}else {

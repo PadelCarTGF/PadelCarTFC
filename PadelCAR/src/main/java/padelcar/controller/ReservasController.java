@@ -18,60 +18,14 @@ import padelcar.service.IReservaService;
 @Controller
 @RequestMapping(value = "/")
 public class ReservasController {
-
 	
 	LoginController lC = new LoginController();
-
 
 	@Autowired
 	IReservaService reservaService;
 	
 	@Autowired 
 	IClienteService clienteService;
-
-//	@RequestMapping(value = "/nuevaReserva", method = RequestMethod.GET)
-//	public ModelAndView visualizar() {
-//		ModelAndView model = new ModelAndView("nuevaReserva");
-//		model.addObject("nuevaReserva");
-//		return model;
-//	}
-
-	// LISTA CON TODAS LAS RESERVAS
-
-//	@RequestMapping(value = "nuevaReserva/getAll", method = RequestMethod.GET)
-//	public List<Reserva> todasReservas() {
-//		return reservaService.listReservas();
-//	}
-//	
-
-//	@RequestMapping(value = "/modificarReserva", method = RequestMethod.GET)
-//    public ModelAndView modificarReserva() {
-//		ModelAndView model = new ModelAndView("modificarReserva");
-//		Reserva reserva = new Reserva();
-//		model.addObject("modifForm", reserva);
-//		
-//        return model;
-//    }
-
-
-//	@RequestMapping(value = "reserva/{id}", method = RequestMethod.GET)
-//	public void reservaPor(int cliente_id) {
-//		reservaService.findByCliente_Id(cliente_id);
-//	}
-
-//	@RequestMapping(value = "/modificarReserva/{cliente_id}, {date}, {time}", method = RequestMethod.PUT)
-//	public @ResponseBody Reserva updateReserva(@PathVariable("cliente_id") int cliente_id, @PathVariable("date") Date fecha,
-//			@PathVariable("time") Time hora, String nombrePista, int numJugadores) {
-//		Reserva reserva = reservaService.findByCliente_idAndFechaAndHora(cliente_id, fecha, hora);
-//		reserva.setFecha(fecha);
-//		reserva.setHora(hora);
-//		reserva.setNombre_pista(nombrePista);
-//		reserva.setNum_jugadores(numJugadores);
-//		reservaService.save(reserva);
-//		
-//		return reserva;
-//
-//	}
 
 	// Nueva Reserva
 	@RequestMapping(value = "/nuevaReserva", method = RequestMethod.GET)
@@ -84,7 +38,6 @@ public class ReservasController {
 	}
 
 	// GUARDAR
-
 	@RequestMapping(value = "nuevaReserva/guardar", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute("reservaForm") Reserva reserva) {
 		reservaService.saveOrUpdate(reserva);
@@ -92,7 +45,7 @@ public class ReservasController {
 		return new ModelAndView("redirect:/modificarReserva");
 	}
 
-//Actualizar o Modificar reserva
+	// Actualizar o Modificar reserva
 	@RequestMapping(value = "reserva/update/{id}", method = RequestMethod.GET)
 	public ModelAndView update(@PathVariable("id") int id) {
 		ModelAndView model = new ModelAndView("nuevaReserva");
@@ -107,7 +60,7 @@ public class ReservasController {
 	public ModelAndView list() {
 		ModelAndView model = new ModelAndView("modificarReserva");
 		LoginController lC = new LoginController();
-		int cliente_id = lC.enviarId();
+		int cliente_id = lC.getIdClient();
 		
 		List<Reserva> list = reservaService.listReservas();
 		List<Reserva> listFilter = new ArrayList<Reserva>();

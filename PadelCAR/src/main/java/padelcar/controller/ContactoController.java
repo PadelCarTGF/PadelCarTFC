@@ -12,7 +12,7 @@ public class ContactoController {
 
 	@RequestMapping(value = "/contacto", method = RequestMethod.GET)
 	public ModelAndView visualizar() {
-		int cliId = lC.enviarId(); // Variable que retorna Login en caso de iniciar sesion
+		int cliId = lC.getIdClient(); // Variable que retorna Login en caso de iniciar sesion
 		   							// Devuelve 0 si el usuario no ha iniciado sesion
 		System.out.println(cliId);
 		if (cliId > 0) {

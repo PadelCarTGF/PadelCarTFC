@@ -55,13 +55,4 @@ public class ClienteDaoImpl implements IClienteDao {
 		Cliente cliente = (Cliente) q.uniqueResult(); 
 		return cliente;
 	}
-
-//	@Override
-//	public Cliente findClienteByPassword(String password) {
-//		Query q = getSession().createQuery("from Cliente cl where cl.password=:password");
-//		q.setParameter("password", password.toString().trim());
-//		Cliente cliente = (Cliente) q.uniqueResult(); 
-//		return cliente;
-//	}
-
 }
